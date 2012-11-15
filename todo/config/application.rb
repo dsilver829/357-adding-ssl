@@ -55,5 +55,8 @@ module Todo
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.force_ssl = true #(ENV["ENABLE_HTTPS"] == "yes")
+    config.ssl_options = {hsts: {expires: 3600}}
   end
 end
